@@ -20,6 +20,9 @@ int main(int argc, char **argv)
 		}
 	}
 
-	log_print_proc(proc);
+	Log *log;
+	log_init(&log);
+	log_print_proc(log, proc);
+	log_free(log);
 	return 0;
 }

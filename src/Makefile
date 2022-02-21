@@ -1,7 +1,7 @@
 CC:=gcc
 CFLAGS:=-Wall
 CPPFLAGS:=-I../lib
-LDFLAGS:=-L../lib -llogger
+LDFLAGS:=-L../lib -llogger -lsqlite3
 BIN:=log_reader
 PREFIC:=/usr
 

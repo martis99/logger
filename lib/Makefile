@@ -12,7 +12,7 @@ $(LIB): logger.o
 	$(CC) -fpic -shared -o $@ $^
 
 logger.o: logger.c logger.h
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -fPIC -c -o $@ $<
 
 install:
 	install -d $(PREFIX)/lib $(PREFIX)/include

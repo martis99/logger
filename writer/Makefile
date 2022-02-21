@@ -1,9 +1,9 @@
 CC:=gcc
 CFLAGS:=-Wall
 CPPFLAGS:=-I../lib
-LDFLAGS:=-L../lib -llogger
+LDFLAGS:=-L../lib -llogger -lsqlite3
 BIN:=log_writer log_writer2
-PREFIC:=/usr
+PREFIX:=/usr
 
 .PHONY: clean all install uninstall
 
@@ -20,7 +20,8 @@ install:
 	install -m 555 $(BIN) $(PREFIX)/bin
 
 uninstall:
-	$(RM) $(PREFIX)/bin/$(BIN)
+	$(RM) $(PREFIX)/bin/log_writer
+	$(RM) $(PREFIX)/bin/log_writer2
 
 clean:
 	$(RM) $(BIN) *.o
